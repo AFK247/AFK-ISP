@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/Navbar.css">
+  <link rel="stylesheet" href="CSS/Section.css">
+  <link rel="stylesheet" href="CSS/Carousel.css">
+  <link rel="stylesheet" href="CSS/Footer.css">
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>AFK ISP</title>
+
+</head>
+
+<body style="background: linear-gradient(to bottom, #70017a 0%, #046cb1 50%,#7a9301 100%);">
+  <section id="top_navbar">
+  </section>
+
+
+  <h1 class="text-warning text-center mt-5">Register Now!!</h1>
+
+
+  <hr style="border: 2px solid rgb(234, 245, 244);background-color: rgb(255, 255, 255);" class="col-2 m-auto ">
+  <p class="text-center text-white mt-2 fw-light">We are everywhere in Bangladesh.So what are you waiting for.Buy our
+    Packages.
+  </p>
+
+ <section>
+    <div id="contactForm" class="col-lg-7 col-md-9 col-md-11 col-10 mx-auto my-5 bg-dark rounded-2 text-white">
+      <div class="row">
+
+        <div class="col d-none d-sm-block d-md-block d-lg-block">
+          <img style="width:100%;height:100%;object-fit:cover;" class="img-fluid rounded-start "
+            src="./Images/vertical3.jpg" alt="">
+        </div>
+
+        <div class="col pe-4 py-3 mx-3 ">
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">User Name</label>
+            <input type="text" class="form-control" id="name">
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Phone Number</label>
+            <input type="Number" class="form-control" id="phone">
+          </div>
+
+          <div class="form-outline mb-3">
+            <label class="form-label" for="form7Example7">Address</label>
+            <textarea class="form-control" id="address" placeholder="House Road City" rows="2"></textarea>
+
+          </div>
+
+          <!-- <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+          </div> -->
+
+
+
+          <label class="form-label" for="form7Example7">Choose your Desired Package</label>
+          <select id="pack" class="select form-control mb-1">
+            <option value="Subject 1">Package 1 10 MBPS</option>
+            <option value="Subject 2">Package 2 20 MBPS</option>
+            <option value="Subject 3">Package 3 30 MBPS</option>
+            
+
+          </select>
+          <label class="form-label select-label mb-3">Choose option</label><br>
+
+          <button id="insert" class="btn btn-primary">Submit</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <br><br><br>
+
+  <footer id="footer" class="bg-dark text-white">
+
+  </footer>
+
+
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js';
+
+    
+    const firebaseConfig = {
+      apiKey: "AIzaSyAw0vnb-yrOBv9PsIBnCoKZ7000Qr6ah-Q",
+      authDomain: "isp-user-data.firebaseapp.com",
+      databaseURL: "https://isp-user-data-default-rtdb.firebaseio.com/",
+      projectId: "isp-user-data",
+      storageBucket: "isp-user-data.appspot.com",
+      messagingSenderId: "407815766721",
+      appId: "1:407815766721:web:c79ce3c4bfc8a423d1ca40"
+    };
+
+    //YT Link
+    //https://www.youtube.com/watch?v=BOITPwChVP4&ab_channel=TheAmazingCodeverse
+    // Initialize Firebase
+
+    const app = initializeApp(firebaseConfig);
+    
+    import { getDatabase,ref,set,child,update,remove } from 'https://www.gstatic.com/firebasejs/9.9.4/firebase-database.js';
+
+    const db=getDatabase();
+
+    let name=document.getElementById("name");
+    let email=document.getElementById("email");
+    let phone=document.getElementById("phone");
+    let address=document.getElementById("address");
+    let pack=document.getElementById("pack");
+   
+    let insert=document.getElementById("insert");
+
+    //Insert Data
+    function InsertData(){
+      set(ref(db,"User/"+name.value),{
+        Name: name.value,
+        Email: email.value,
+        Phone: phone.value,
+        Address: address.value,
+        Package: pack.value
+      })
+      .then(()=>{
+        console.log("Data Written Successful");
+        alert("You have successfully Registered");
+      })
+      .catch((error)=>{
+        console.log("Error Occured Data Not Written");
+      })
+    }
+  // console.log("asfsaaf");
+
+  insert.addEventListener("click",InsertData);
+   
+
+  
+  </script>
+
+  <script src="Java/Footer.js"></script>
+  <script src="Java/Navbar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+ 
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Navbar.css">
+    <link rel="stylesheet" href="CSS/Section.css">
+    <link rel="stylesheet" href="CSS/Carousel.css">
+    <link rel="stylesheet" href="CSS/Footer.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>AFK ISP</title>
+</head>
+
+<body>
+    <section id="top_navbar">
+    </section>
+
+    <h1 class="text-danger text-center mt-5">OUR COVERAGE AREA</h1>
+
+    <h2 class="text-center">We are always Faster & Reliable</h2>
+    <hr style="border: 2px solid red;background-color: red;" class="col-1 m-auto ">
+    <p class="text-center mt-2 fw-light">We are everywhere in Bangladesh.So what are you waiting for.Buy our Packages.
+    </p>
+
+    <div class="d-flex justify-content-center">
+        <h4>Select Your Location</h4>
+        <select id="location" class="col-2 ms-4">
+            <option>Dhaka</option>
+            <option>Rajshahi</option>
+            <option>Rangpur</option>
+            <option>Khulna</option>
+            <option>Dinajpur</option>
+            <option>Sylhet</option>
+
+        </select>
+        <Button id="search" class=" btn btn-dark btn-outline-warning ms-4">Search</Button>
+    </div>
+
+
+    <div class="container d-flex justify-content-center my-5">
+        <iframe id="iframe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.0697569304994!2d90.41411731453435!3d23.78053018457454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c79c1fb55131%3A0x1d224c56622059a7!2sAmber%20IT%20Limited!5e0!3m2!1sen!2sbd!4v1662572291507!5m2!1sen!2sbd"
+            width="800" height="450" style="filter: invert(100%);" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+
+
+    <footer id="footer" class="bg-dark text-white mt-5">
+
+    </footer>
+
+    <script>
+        let map = {
+            Dhaka: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.069756930511!2d90.4141173149819!3d23.780530184574427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c79c1fb55131%3A0x1d224c56622059a7!2sAmber%20IT%20Limited!5e0!3m2!1sen!2sbd!4v1662643710939!5m2!1sen!2sbd",
+
+            Rajshahi: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3634.32670541639!2d88.60026591454772!3d24.369935684287658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fbef5d7563bf67%3A0x17a8b57a911edaef!2sAmber%20IT%20Rajshahi!5e0!3m2!1sen!2sbd!4v1662643858352!5m2!1sen!2sbd",
+
+            Rangpur: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.5440328866202!2d89.24460921458024!3d25.752588183640825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e32df504f88221%3A0x16cbf25afcdacf04!2sAmber%20IT%20(Rangpur%20Office)!5e0!3m2!1sen!2sbd!4v1662643896526!5m2!1sen!2sbd",
+
+            Khulna: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.5094615120847!2d89.55087361451325!3d22.82063348505569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff90089943e5d5%3A0x1f37a9cb1ee0c6e6!2sAmber%20IT%20%26%20Dhaka%20FM%2090.4!5e0!3m2!1sen!2sbd!4v1662643928392!5m2!1sen!2sbd",
+
+            Dinajpur: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.3028270950595!2d88.63267241457724!3d25.628073083697625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fb5340acc1c8a3%3A0x87ef3912a7ffd9e7!2sAmber%20IT%2C%20Dinajpur%20branch!5e0!3m2!1sen!2sbd!4v1662643957669!5m2!1sen!2sbd",
+
+            Sylhet: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.215813450605!2d91.85939111455977!3d24.890619184039647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3750552b10afe7c1%3A0x827fb22fe4972db4!2sAmber%20IT!5e0!3m2!1sen!2sbd!4v1662643983180!5m2!1sen!2sbd"
+
+        };
+
+
+        document.getElementById("search").addEventListener("click", display)
+
+        function display() {
+            const location_field = document.getElementById("location");
+            let location = location_field.value;
+            
+            const iframe= document.getElementById("iframe");
+
+            iframe.src=map[location];
+            
+        }
+
+    </script>
+
+
+    <script src="Java/Footer.js"></script>
+    <script src="Java/Navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

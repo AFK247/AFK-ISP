@@ -1,0 +1,24 @@
+.register:hover{
+    transition:ease-in .2s;
+    transform: scale(1.2) ; 
+    color: rgb(5, 5, 5) !important;
+}
+.home:hover{
+    transition:ease-in .2s;
+    transform: scale(1.2) ; 
+    color: aqua !important;
+}
+
+.margin{
+    margin-right: 0;
+}
+
+.design:hover{
+    transition:all .5s;
+    color: aqua !important;
+}
+
+.design:hover{
+    
+    transform: scale(1.2) rotate(360deg);
+}

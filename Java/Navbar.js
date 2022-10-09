@@ -1,7 +1,7 @@
 const navbar=document.getElementById("top_navbar");
 
 navbar.innerHTML=`
-<nav class="navbar navbar-dark navbar-expand-lg navbar-expand-md navbar-expand-sm bg-dark ">
+<nav class="navbar fixed-top navbar-dark navbar-expand-lg navbar-expand-md navbar-expand-sm bg-dark ">
 <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -28,8 +28,9 @@ navbar.innerHTML=`
             
         </ul>
         <form class="margin d-flex justify-content-center m-4 m-lg-0 m-md-0 m-sm-0" role="search">
+        <a class="register btn btn-outline-warning me-4" href="../admin.html">Admin</a>
             <a class="register btn btn-outline-warning me-4" href="../registration.html">Register</a>
-            <a class="register btn btn-outline-info rounded-pill me-4" href="../blog.html">Blog</a>
+            <a class="register btn btn-outline-info rounded-pill me-4" href="../blog.html">News</a>
         </form>
     </div>
 </div>

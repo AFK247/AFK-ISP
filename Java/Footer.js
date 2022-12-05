@@ -11,17 +11,17 @@ footer.innerHTML=`
 <div class="col">
     <h3 class=" mb-4 fw-bolder">PRODUCTS</h3>
     <hr style="border: 2px solid red;background-color: red;" class="col-8 mx-auto">
-    <p><a>MDBootstrap</a></p>
-    <p><a>MDWordPress</a></p>
-    <p><a>BrandFlow</a></p>
-    <p><a>Bootstrap Angular</a></p>
+    <p><a>Home Internet</a></p>
+    <p><a>IP Telephony</a></p>
+    <p><a>IP TV</a></p>
+    <p><a>News Portal</a></p>
 </div>
 
 <div class="col">
     <h3 class="mb-4 fw-bolder">CONTACT</h3>
     <hr style="border: 2px solid red;background-color: red;" class="col-8 mx-auto">
-    <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-    <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+    <p><i class="fas fa-home mr-3"></i> Rajshahi, Kajla, Octroy More</p>
+    <p><i class="fas fa-envelope mr-3"></i> afk.info@gmail.com</p>
     <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
     <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
 </div>
